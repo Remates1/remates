@@ -1,0 +1,85 @@
+:root {
+    --theme-color: #f8fafc;
+    --second-theme-color: #f1f5f9;
+    --third-theme-color: #e2e8f0;
+    --navbar-hover: #cbd5e1;
+    --footer-background-color: #cbd5e1;
+
+    --primary-color: #124f88;
+    --secondary-color: #f7c331;
+    --text-color-inverse: white;
+    --text-color: #0f172a;
+    --navbar-shallow-color: #e5e5e5;
+    --menu-mobile-background-color: #3a4460;
+
+    --accent-color: var(--primary-color);
+    --primary-color-inverse: black;
+
+    --transition: .3s ease;
+    color-scheme: light;
+
+    --users: rgb(235, 235, 235);
+}
+
+:root[data-theme="dark"] {
+    --theme-color: #1e293b;
+    --second-theme-color: #0f172a;
+    --third-theme-color: var(--theme-color);
+    --navbar-hover: #334155;
+    --footer-background-color: var(--second-theme-color);
+
+
+    --primary-color: #243043;
+    --secondary-color: #9dc8db;
+    --text-color: #f1f5f9;
+    --text-color-inverse: var(--text-color);
+    --navbar-shallow-color: #e5e5e5;
+    --menu-mobile-background-color: #18213e;
+
+    --accent-color: var(--secondary-color);
+
+    color-scheme: dark;
+
+    --users: rgb(7, 11, 66);
+}
+
+
+html {
+    font-size: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    /* background-color: var(--theme-color);
+    transition: var(--transition); */
+    position: relative;
+    min-height: 100%;
+}
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    *list-style: none;
+    *list-style-type: none;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    *font-family: inter, Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    *color: var(--text-color);
+    background: var(--theme-color);
+    transition: var(--transition);
+}
+
+body.scrolling {
+    overflow-y: hidden
+}

@@ -1,0 +1,107 @@
+@import url('https://fonts.cdnfonts.com/css/digital-numbers');
+
+.section1 {
+    margin: 100px auto;
+    padding: 0 0.75rem;
+    max-width: 1440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#con {
+    *background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#showUsers {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.userI {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--users);
+    padding: 10px;
+    border-radius: 10px;
+    gap: 10px;
+    color: var(--text-color);
+}
+
+.userI img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    padding: 18px;
+    border: solid 10px rgb(50, 50, 50);
+    border-radius: 35px;
+    transition: all .8s;
+    *width: 500px;
+    font-family: 'Digital Numbers', sans-serif;
+    font-size: 50px;
+    color: rgb(255, 125, 125);
+    text-shadow: 0 0 10px red;
+
+    background-color: rgb(0, 0, 0);
+    box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 5);
+}
+
+.countdown span {
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    min-width: 80px;
+    height: 90px;
+    padding-bottom: 10px;
+}
+
+.countdown span::after {
+    content: '88';
+    position: absolute;
+    left: 0;
+    color: rgba(255, 255, 255, 0.1);
+    text-shadow: none;
+}
+
+.countdown #dayElement::before {
+    content: 'DAYS';
+}
+
+.countdown #hourElement::before {
+    content: 'HOURS';
+}
+
+.countdown #minElement::before {
+    content: 'MINS';
+}
+
+.countdown #secElement::before {
+    content: 'SECS';
+}
+
+.countdown span::before {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: darkgray;
+    text-shadow: none;
+}
+
