@@ -43,6 +43,21 @@
     border-radius: 50%;
 }
 
+#pro {
+    *display: flex;
+}
+
+#results {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+}
+
+.numeros {
+    display: flex;
+    justify-content: space-between;
+}
+
 .countdown {
     display: flex;
     justify-content: center;

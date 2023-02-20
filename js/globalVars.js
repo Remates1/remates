@@ -7,8 +7,8 @@ const hours = today.getHours() + " hrs";
 const minutes = today.getMinutes() + " min";
 const seconds = today.getSeconds() + " sec";
 
-export const date = `${month}/${day}/${year}`
-export const timeDate = `${hours} ${minutes} ${seconds} - ${month}/${day}/${year}`
+export const date = `${day}/${month}/${year}`
+export const timeDate = `${hours} ${minutes} ${seconds} - ${day}/${month}/${year}`
 
 export function reload() {
     setTimeout(function () {

@@ -6,7 +6,7 @@ import { reload } from "../globalVars.js"
 const logout = document.querySelector('#logout')
 
 logout?.addEventListener('click', async () => {
-    reload()
-    showMessage("Sesion cerrada con exito ", "success")
+    //reload()
+    //showMessage("Sesion cerrada con exito ", "success")
     await signOut(auth)
 })

@@ -24,7 +24,7 @@ signupForm.addEventListener('submit', async (e) => {
 
         showMessage("Bienvenido " + /* userCredential.user.email */ name, "success")
 
-        /* await setDoc(doc(db, "users", user.uid), {
+        await setDoc(doc(db, "users", user.uid), {
             email: email,
             // password: password,
             name: name,
@@ -34,19 +34,7 @@ signupForm.addEventListener('submit', async (e) => {
             counterAge: 4,
             accountCreationDate: date,
             accountCreationTimeDate: timeDate,
-        }); */
-
-        await set(ref(database, "users/" + user.uid), {
-            email: email,
-            // password: password,
-            name: name,
-            age: '',
-            accountImg: 'https://p16-va-default.akamaized.net/img/musically-maliva-obj/1665282759496710~c5_720x720.jpeg',
-            counterName: 4,
-            counterAge: 4,
-            accountCreationDate: date,
-            accountCreationTimeDate: timeDate,
-        })
+        });
 
 
     } catch (error) {

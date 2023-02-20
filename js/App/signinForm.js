@@ -20,13 +20,15 @@ signInForm.addEventListener('submit', async e => {
 
         signInForm.reset()
 
-        
+        var nameUser
 
-        if (dataUser.name !== '') {
-            showMessage("Bienvenido " + dataUser.name, "success")
-        } else {
-            showMessage("Bienvenido " + credentials.user.email, "success")
-        }
+        onSnapshot(doc(db, "users", user.uid), (doc) => {
+            const userData = doc.data()
+            nameUser = userData.name
+        })
+
+        showMessage("Bienvenido " + nameUser, "success")
+
 
     } catch (error) {
         console.log(error.message)

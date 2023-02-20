@@ -99,8 +99,10 @@
                             <ul class="sub-menu">
                                 <li class="menu-item open-login logged-out"><a href="#">Iniciar sesion</a></li>
                                 <li class="menu-item open-signup logged-out"><a href="#">Crear cuenta</a></li>
-                                <li class="menu-item logged-in"><a href="profile.html"><i class="fa-solid fa-user"></i> Perfil</a></li>
-                                <li class="menu-item logged-in" id="logout"><a href="#"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesion</a></li>
+                                <li class="menu-item logged-in"><a href="profile.html"><i class="fa-solid fa-user"></i>
+                                        Perfil</a></li>
+                                <li class="menu-item logged-in" id="logout"><a href="#"><i
+                                            class="fa-solid fa-right-from-bracket"></i> Cerrar sesion</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -137,15 +139,16 @@
                 <form action="" id="signup-form">
                     <div>
                         <label for="name">Name:</label>
-                        <input type="text" id="signup-name" placeholder="Name" required minlength="2" maxlength="20">
+                        <input title="Nombre" type="text" id="signup-name" placeholder="Name" required minlength="2"
+                            maxlength="20">
                     </div>
                     <div>
                         <label for="email">Email:</label>
-                        <input type="email" id="signup-email" placeholder="Email" required>
+                        <input title="Email" type="email" id="signup-email" placeholder="Email" required>
                     </div>
                     <div>
                         <label for="password">Password:</label>
-                        <input type="password" id="signup-password" placeholder="Password" required>
+                        <input title="Contraseña" type="password" id="signup-password" placeholder="Password" required>
                     </div>
                     <div>
                         <button type="submit">Sign up</button>
@@ -172,7 +175,21 @@
         <div id="con">
             <h1>Usuarios registrados:</h1>
             <div id="showUsers">
-                
+
+            </div>
+        </div>
+        <div id="containerValue">
+            <br><br><br>
+            <p>name1d4wqa4</p>
+            <input id="inputNumber" type="number" required>
+            <button id="btnNumber">Aceptar</button>
+            <div class="numeros">
+                <div id="results">
+
+                </div>
+                <div>
+                    <p id="num"></p>
+                </div>
             </div>
         </div>
     </section>
