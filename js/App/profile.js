@@ -91,6 +91,9 @@ function changeName(userUID) {
                             name: inputName.value,
                             counterName: counterNameUser - 1
                         })
+                        updateDoc(doc(db, 'pro1/', userUID), {
+                            valueNameUser: inputName.value,
+                        })
                         showMessage("Datos actualizados con exito", "success")
                     } catch (error) {
                         console.log(error)
