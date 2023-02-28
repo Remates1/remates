@@ -58,6 +58,34 @@
     justify-content: space-between;
 }
 
+.full-container-ars {
+    display: flex;
+    margin: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#containerValue {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-ars {
+    padding: 10px;
+    border: 1px solid black;
+    width: 200px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .countdown {
     display: flex;
     justify-content: center;
@@ -118,5 +146,20 @@
     font-weight: bold;
     color: darkgray;
     text-shadow: none;
+}
+
+@media only screen and (max-width:768px) {
+    .countdown {
+        font-size: 20px;
+    }
+    
+    .countdown span {
+        min-width: 40px;
+        height: 60px;
+    }
+    
+    .countdown span::before {
+        font-size: 13px;
+    }
 }
 

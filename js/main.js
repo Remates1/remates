@@ -1,7 +1,4 @@
-
-
-
-/* function timeH(month, day) {
+function timeH(month, day) {
     month -= 1
     const nextYear = (new Date()).getFullYear() + 0
     const nextYearDate = new Date(nextYear, month, day)
@@ -50,6 +47,6 @@
         }
     })
 }
-timeH(2, 12) */
+timeH(3, 28)
 
 
