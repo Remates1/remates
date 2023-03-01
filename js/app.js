@@ -7,11 +7,11 @@ import { reloadUpdateInfoUser } from "./globalVars.js"
 import { showMessage } from "./components/showMessage/showMessage.js"
 import { noLogin, showUserss, userChangeData } from "./App/profile.js"
 import { closeModalSignup, date, timeDate } from "./globalVars.js"
+import { noUserValue, showUserValue, valueOn } from "./App/pro1.js"
 
 import './App/signupForm.js'
 import './App/signinForm.js'
 import './App/logout.js'
-import { valueOn } from "./App/pro1.js"
 
 
 
@@ -25,8 +25,10 @@ onAuthStateChanged(auth, async (user) => {
         valueOn(userUID)
 
     } else {
+        noUserValue()
         noLogin()
     }
+    showUserValue()
     showUserss()
 
 })
