@@ -70,6 +70,7 @@ export function noUserValue() {
 export function showUserValue() {
     const tr = document.querySelector('#tr')
     if (tr !== null) {
+
         const noAdmin = query(collection(db, "pro1"), where("valueUser", "!=", null), orderBy("valueUser", "desc"))
         onSnapshot((noAdmin), (querySnapshot) => {
 
@@ -81,13 +82,14 @@ export function showUserValue() {
 
                 //resultsValue.innerHTML += ``
                 tr.innerHTML += `
-                <tr>
+                    <tr>
                     <td>${valueUserName}</td>
                     <td>$${valueUserU}</td>
-                </tr>
-                `
+                    </tr>
+                    `
             });
         })
+
     }
 }
 
