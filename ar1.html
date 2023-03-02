@@ -62,9 +62,9 @@
 </style>
 
 <body>
-    <div id="loader-container">
+    <!-- <div id="loader-container">
         <div id="loader"></div>
-    </div>
+    </div> -->
     <!-- Section: Header -->
     <header class="header">
         <div class="container">
@@ -216,8 +216,9 @@
             <br>
             <p>ar1</p>
             <div id="noShowValueUser">
-                <input id="inputNumber" type="number" required>
-                <button id="btnNumber">Aceptar</button>
+                <input id="inputNumber" type="number" placeholder="Ingrese un valor..." min="0"
+                    style="padding: 5px; outline: none;">
+                <button id="btnNumber" style="padding: 5px;">Aceptar</button>
                 <div class="numeros">
                     <div id="results">
 
@@ -229,13 +230,36 @@
             </div>
         </div>
         <br>
-        <table id="tr">
-            <tr id="td">
+        <div>
+            <div
+                style="display: flex; width: 100%; text-align: center; background-color: #74afb9; font-size: 20px; padding: 8px;">
+                <p style="width: 50%;">Nombre</p>
+                <p style="width: 50%;">Total</p>
+<!--                 <p style="width: 50%;">Hora</p>
+                <p style="width: 50%;">Fecha</p> -->
+            </div>
+            <table id="tr">
+                <tr id="td">
 
-            </tr>
+                </tr>
 
-        </table>
-
+            </table>
+        </div>
+        <div class="sk-circle" style="display: none;" id="circle">
+            <div class="sk-circle1 sk-child"></div>
+            <div class="sk-circle2 sk-child"></div>
+            <div class="sk-circle3 sk-child"></div>
+            <div class="sk-circle4 sk-child"></div>
+            <div class="sk-circle5 sk-child"></div>
+            <div class="sk-circle6 sk-child"></div>
+            <div class="sk-circle7 sk-child"></div>
+            <div class="sk-circle8 sk-child"></div>
+            <div class="sk-circle9 sk-child"></div>
+            <div class="sk-circle10 sk-child"></div>
+            <div class="sk-circle11 sk-child"></div>
+            <div class="sk-circle12 sk-child"></div>
+        </div>
+        <div id="data" style="margin-top: -10px; display: none;">Cargando datos...</div>
     </section>
 
     <div class="go-top-container">
@@ -252,6 +276,7 @@
 
     <!-- CDN JS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- ------------------------------------------------------------------------------------------------------------------------ -->
 
     <!-- Global JS -->

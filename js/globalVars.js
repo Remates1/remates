@@ -9,6 +9,10 @@ const seconds = today.getSeconds() + " sec";
 
 export const date = `${day}/${month}/${year}`
 export const timeDate = `${hours} ${minutes} ${seconds} - ${day}/${month}/${year}`
+export const time = `${hours} ${minutes} ${seconds}`
+
+const circle = document.getElementById('circle');
+const data = document.getElementById('data');
 
 export function reload() {
     setTimeout(function () {
@@ -40,4 +44,14 @@ export function closeModalSignup() {
         modalContainerSignup.style.opacity = "0";
         modalContainerSignup.style.visibility = "hidden";
     }, 500)
+}
+
+export function dataLoaderOn() {
+    circle.style.display = 'block';
+    data.style.display = 'block';
+}
+
+export function dataLoaderOff() {
+    circle.style.display = 'none';
+    data.style.display = 'none';
 }

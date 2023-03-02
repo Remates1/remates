@@ -3,7 +3,7 @@ import { ref, onValue, update } from "https://www.gstatic.com/firebasejs/9.17.1/
 import { auth, database, db } from "../App/firebase.js"
 import { loginCheck } from '../App/loginCheck.js'
 import { collection, getFirestore, addDoc, setDoc, doc, getDocs, getDoc, updateDoc, query, where, orderBy, limit, onSnapshot } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js"
-import { reloadUpdateInfoUser } from "../globalVars.js"
+import { dataLoaderOff, dataLoaderOn, reloadUpdateInfoUser, time } from "../globalVars.js"
 import { showMessage } from "../components/showMessage/showMessage.js"
 import { closeModalSignup, date, timeDate } from "../globalVars.js"
 
@@ -15,6 +15,7 @@ const num = document.querySelector('#num')
 
 var valueUserU;
 var valueNameUserU;
+var valueImgUserU
 var valueUserAlto;
 var valueNameUser2;
 var minimo
@@ -24,34 +25,40 @@ export function valueOn(userUID) {
         onSnapshot(doc(db, "users", userUID), (doc) => {
             const userData = doc.data()
             valueNameUserU = userData.name
+            valueImgUserU = userData.accountImg
         })
 
         onSnapshot(doc(db, "pro1/" + "minimo"), (doc) => {
             const userData = doc.data()
             minimo = userData.minimo
-            console.log(minimo)
+            //console.log(minimo)
         })
 
         btnValue?.addEventListener('click', () => {
-            console.log(inputValue.value)
-            if (inputValue.value > minimo) {
-                if (inputValue.value - minimo > 200) {
-                    setDoc(doc(db, "pro1/", userUID), {
-                        valueUser: parseInt(inputValue.value),
-                        valueNameUser: valueNameUserU,
-                        accountCreationDate: date,
-                        accountCreationTimeDate: timeDate,
-                    });
-                    setDoc(doc(db, "pro1/" + "minimo"), {
-                        minimo: parseInt(inputValue.value)
-                    });
-                    inputValue.value = ''
+            //console.log(inputValue.value)
+            if (inputValue.value !== '') {
+                if (inputValue.value > minimo || minimo == undefined) {
+                    if (inputValue.value - minimo > 200 || minimo == undefined) {
+                        setDoc(doc(db, "pro1/", userUID), {
+                            valueUser: parseInt(inputValue.value),
+                            valueNameUser: valueNameUserU,
+                            valueImgUser: valueImgUserU,
+                            valueCreationDate: date,
+                            valueCreationTime: time,
+                        });
+                        setDoc(doc(db, "pro1/" + "minimo"), {
+                            minimo: parseInt(inputValue.value)
+                        });
+                        inputValue.value = ''
+                    } else {
+                        let dif = inputValue.value - minimo
+                        alert("La diferencia tiene que ser mayor a 200. \nDiferencia: " + dif)
+                    }
                 } else {
-                    let dif = inputValue.value - minimo
-                    alert("La diferencia tiene que ser mayor a 200. \nDiferencia: " + dif)
+                    alert("El numero tiene que se mayor $" + minimo)
                 }
             } else {
-                alert("El numero tiene que se mayor $" + minimo)
+                alert("El campo no puede estar vacio")
             }
         })
 
@@ -67,27 +74,38 @@ export function noUserValue() {
     }
 }
 
+
 export function showUserValue() {
+
     const tr = document.querySelector('#tr')
     if (tr !== null) {
-
+        dataLoaderOn()
         const noAdmin = query(collection(db, "pro1"), where("valueUser", "!=", null), orderBy("valueUser", "desc"))
         onSnapshot((noAdmin), (querySnapshot) => {
-
+            dataLoaderOff()
             tr.innerHTML = ''
             querySnapshot.forEach((doc) => {
                 const valuerData = doc.data()
                 valueUserU = valuerData.valueUser
                 var valueUserName = valuerData.valueNameUser
-
-                //resultsValue.innerHTML += ``
+                var valueUserImg = valuerData.valueImgUser
+                var valueCreationDate = valuerData.valueCreationDate
+                var valueCreationTime = valuerData.valueCreationTime
                 tr.innerHTML += `
                     <tr>
-                    <td>${valueUserName}</td>
-                    <td>$${valueUserU}</td>
+                        <td>
+                            <div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+                                <img width="40px" src="${valueUserImg}" style="border-radius: 50%; height: 40px; object-fit: cover;">
+                                <p>${valueUserName}</p>
+                            </div>
+                        </td>
+                        <td>$${valueUserU}</td>
+                        <!-- <td>${valueCreationTime}</td>
+                        <td>${valueCreationDate}</td> -->
                     </tr>
                     `
             });
+
         })
 
     }
@@ -137,8 +155,7 @@ function timeH(month, day) {
             }
 
             if (days == 0 && hours == 0 && minutes == 0 && seconds == 0) {
-                const timeOut = document.querySelector('#timeOut')
-                timeOut.innerHTML = "El timepo se termino"
+                noShowValueUser.innerHTML = 'Se termino el tiempo'
                 clearInterval(time)
             }
         })

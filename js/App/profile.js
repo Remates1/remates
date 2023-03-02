@@ -33,9 +33,12 @@ var counterNameUser;
 var counterAgeUser;
 var accountCreationDateUser;
 
+const circle = document.getElementById('circle');
 export function userChangeData(userUID) {
+    circle.style.display = 'block';
     if (containerProfile !== null) {
         onSnapshot(doc(db, "users", userUID), (doc) => {
+            circle.style.display = 'none';
             clearHTML()
 
             const userData = doc.data()
@@ -49,6 +52,7 @@ export function userChangeData(userUID) {
 
             showData()
         })
+        changeImg(userUID)
         changeName(userUID)
         changeAge(userUID)
     }
@@ -81,6 +85,22 @@ function showData() {
 /* ------------------------------------------------------------------------------------------------------ */
 
 /* Change user data */
+function changeImg(userUID) {
+    btnImg?.addEventListener('click', function () {
+        try {
+            updateDoc(doc(db, 'users', userUID), {
+                accountImg: inputImg.value,
+            })
+            updateDoc(doc(db, 'pro1/', userUID), {
+                valueImgUser: inputImg.value,
+            })
+            showMessage("Datos actualizados con exito", "success")
+        } catch (error) {
+            console.log(error)
+        }
+    })
+}
+
 function changeName(userUID) {
     acceptName?.addEventListener('click', function () {
         if (counterNameUser > 0) {

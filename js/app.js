@@ -18,17 +18,21 @@ import './App/logout.js'
 onAuthStateChanged(auth, async (user) => {
     loginCheck(user)
     if (user) {
-        const userUID = user.uid
 
-        userChangeData(userUID)
+        userChangeData(user.uid)
 
-        valueOn(userUID)
+        valueOn(user.uid)
 
     } else {
+
         noUserValue()
+
         noLogin()
+
     }
+    
     showUserValue()
+    
     showUserss()
 
 })
