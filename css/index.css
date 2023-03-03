@@ -155,7 +155,7 @@
     
     .countdown span {
         min-width: 40px;
-        height: 60px;
+        height: 50px;
     }
     
     .countdown span::before {

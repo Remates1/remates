@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Document</title>
+    <title>Ar1</title>
     <!-- Inicial script -->
     <script src="./js/components/toggleTheme/InicialThemeUser.js"></script>
     <!-- ------------------------------------------------------------------------------------------------------------------------ -->
@@ -28,38 +28,10 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/ars/ar1.css">
     <!-- ------------------------------------------------------------------------------------------------------------------------ -->
 
 </head>
-<style>
-    table {
-        border-collapse: collapse;
-        width: 100%;
-        table-layout: fixed;
-    }
-
-    tr:nth-child(even) {
-        background: #f1f7f8;
-    }
-
-    th,
-    td {
-        border: 1px solid #a0c8cf;
-        padding: .75rem;
-        text-align: center;
-    }
-
-    th {
-        background: #74afb9;
-        color: #fff;
-    }
-
-    td {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-</style>
 
 <body>
     <!-- <div id="loader-container">
@@ -90,7 +62,7 @@
                         </button>
                     </div>
                     <ul class="menu">
-                        <li class="menu-item"><a href="index.html">Home</a></li>
+                        <li class="menu-item"><a href="index.html">Inicio</a></li>
                         <li class="menu-item"><a href="#">About</a></li>
                         <li class="menu-item menu-item-has-children">
                             <a href="#" data-toggle="sub-menu">Services<i class="expand"></i></a>
@@ -229,22 +201,48 @@
                 </div>
             </div>
         </div>
-        <br>
-        <div>
-            <div
-                style="display: flex; width: 100%; text-align: center; background-color: #74afb9; font-size: 20px; padding: 8px;">
-                <p style="width: 50%;">Nombre</p>
-                <p style="width: 50%;">Total</p>
-<!--                 <p style="width: 50%;">Hora</p>
-                <p style="width: 50%;">Fecha</p> -->
+        <br><br>
+        <div class="container">
+            <div>
+                <div id="no-more-tables">
+                    <table>
+                        <thead>
+                            <tr>
+                                <!-- <th>Img</th> -->
+                                <th>Nombre</th>
+                                <th class="numeric">Total</th>
+                                <!-- <th class="numeric">Hora</th> -->
+                                <th class="numeric">Fecha</th>
+                                <!-- <th class="numeric">Change %</th>
+                                <th class="numeric">Open</th>
+                                <th class="numeric">High</th>
+                                <th class="numeric">Low</th>
+                                <th class="numeric">Volume</th> -->
+                            </tr>
+                        </thead>
+                        <tbody id="tr">
+                            <!-- <tr>
+                                <td data-title="Total">AAX</td>
+                                <td data-title="Company">AUSENCO LIMITED</td>
+                                <td data-title="Price" class="numeric">$4.00</td>
+                                <td data-title="Change" class="numeric">-0.04</td>
+                                <td data-title="Change %" class="numeric">-0.99%</td>
+                                <td data-title="Open" class="numeric">$4.01</td>
+                                <td data-title="High" class="numeric">$4.05</td>
+                                <td data-title="Low" class="numeric">$4.00</td>
+                                <td data-title="Volume" class="numeric">90,641</td>
+                            </tr> -->
+
+
+
+
+                        </tbody>
+                    </table>
+                </div>
             </div>
-            <table id="tr">
-                <tr id="td">
-
-                </tr>
-
-            </table>
         </div>
+
+
         <div class="sk-circle" style="display: none;" id="circle">
             <div class="sk-circle1 sk-child"></div>
             <div class="sk-circle2 sk-child"></div>

@@ -76,7 +76,6 @@ export function noUserValue() {
 
 
 export function showUserValue() {
-
     const tr = document.querySelector('#tr')
     if (tr !== null) {
         dataLoaderOn()
@@ -93,21 +92,19 @@ export function showUserValue() {
                 var valueCreationTime = valuerData.valueCreationTime
                 tr.innerHTML += `
                     <tr>
-                        <td>
-                            <div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
-                                <img width="40px" src="${valueUserImg}" style="border-radius: 50%; height: 40px; object-fit: cover;">
-                                <p>${valueUserName}</p>
-                            </div>
+                        <!-- <td data-title="Img">
+                            <img width="40px" src="${valueUserImg}" style="border-radius: 50%; height: 40px; object-fit: cover;">
+                        </td> -->
+                        <td data-title="Nombre" >
+                            <p>${valueUserName}</p>
                         </td>
-                        <td>$${valueUserU}</td>
-                        <!-- <td>${valueCreationTime}</td>
-                        <td>${valueCreationDate}</td> -->
+                        <td data-title="Total">$${valueUserU}</td>
+                        <!-- <td>${valueCreationTime}</td> -->
+                        <td data-title="Fecha">${valueCreationDate}</td>
                     </tr>
-                    `
+                `
             });
-
         })
-
     }
 }
 
