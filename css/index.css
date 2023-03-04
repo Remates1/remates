@@ -16,21 +16,22 @@
     *background-color: rgb(11, 126, 228);
 }
 
+.title-new-products {
+    margin-bottom: 50px;
+    color: white;
+    font-size: 19px;
+}
+
 @media screen and (max-width: 550px) {
     .container-new-products {
         padding: 14px;
     }
 
     .title-new-products {
-        margin-bottom: 14px;
+        margin-top: 16px;
+        margin-bottom: 30px;
         
     }
-}
-
-.title-new-products {
-    margin-bottom: 50px;
-    color: white;
-    font-size: 19px;
 }
 
 .info-new-product {

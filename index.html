@@ -15,6 +15,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- ------------------------------------------------------------------------------------------------------------------------ -->
 
     <!-- Global CSS -->
@@ -23,7 +24,7 @@
     <link rel="stylesheet" href="./css/components/footer.css">
     <link rel="stylesheet" href="./css/components/toggleTheme.css">
     <link rel="stylesheet" href="./css/components/modal.css">
-    <!-- <link rel="stylesheet" href="./css/components/loader.css"> -->
+    <link rel="stylesheet" href="./css/components/loader.css">
     <link rel="stylesheet" type="text/css" href="./css/components/navbar.css">
     <!-- ------------------------------------------------------------------------------------------------------------------------ -->
 
@@ -51,7 +52,6 @@
                 <div class="overlay"></div>
                 <nav class="navbar">
                     <div class="container-btn">
-
                         <button type="button" class="btn-open-close closed-menu">
                             <i class="size-icon fa-solid fa-xmark"></i>
                         </button>
@@ -66,15 +66,6 @@
                         <li class="menu-item"><a href="index.html">Inicio</a></li>
                         <li class="menu-item"><a href="#">About</a></li>
                         <li class="menu-item menu-item-has-children">
-                            <a href="#" data-toggle="sub-menu">Services<i class="expand"></i></a>
-                            <ul class="sub-menu">
-                                <li class="menu-item"><a href="#">Web Design</a></li>
-                                <li class="menu-item"><a href="#">Web Development</a></li>
-                                <li class="menu-item"><a href="#">Brand Marketing</a></li>
-                                <li class="menu-item"><a href="#">SEO and Optimizing</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item menu-item-has-children">
                             <a href="#" data-toggle="sub-menu">Article <i class="expand"></i></a>
                             <ul class="sub-menu">
                                 <li class="menu-item"><a href="#">Article One</a></li>
@@ -86,17 +77,26 @@
                                 <li class="menu-item"><a href="#">Article Seven</a></li>
                             </ul>
                         </li>
-                        <li class="menu-item"><a href="#">Contact </a></li>
                         <li class="menu-item menu-item-has-children">
                             <a href="#" data-toggle="sub-menu">Cuenta <i class="expand"></i></a>
                             <ul class="sub-menu">
-                                <li class="menu-item open-login logged-out"><a href="#">Iniciar sesion</a></li>
-                                <li class="menu-item open-signup logged-out"><a href="#">Crear cuenta</a></li>
-                                <li class="menu-item logged-in"><a href="profile.html"><i class="fa-solid fa-user"></i>
-                                        Perfil</a></li>
-                                <li class="menu-item logged-in" id="logout"><a href="#"><i
-                                            class="fa-solid fa-right-from-bracket"></i> Cerrar sesion</a></li>
+                                <li class="menu-item open-login logged-out">
+                                    <a href="#">Iniciar sesion</a>
+                                </li>
+                                <li class="menu-item open-signup logged-out">
+                                    <a href="#">Crear cuenta</a>
+                                </li>
+                                <li class="menu-item logged-in">
+                                    <a href="profile.html"><i class="fa-solid fa-user"></i> Perfil</a>
+                                </li>
+                                <li class="menu-item logged-in" id="logout">
+                                    <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesion</a>
+                                </li>
                             </ul>
+                        </li>
+                        <li class="menu-item">
+                            <a class="a-search " href="#"><input class="search" type="search" name="" id=""
+                                    placeholder="Buscar..."></a>
                         </li>
                     </ul>
                 </nav>
@@ -158,7 +158,7 @@
             <!-- Slides -->
             <div class="swiper-slide swiper-slide1">
                 <img class="img-carrousel" src="./img/antique-g3f92090d1_1280.jpg" alt="">
-                <div class="hj">
+                <div class="full-container-p">
                     <div class="container-p">
                         <p class="p-carrousel">Bienvenido a (Nombre marca)</p>
                     </div>
@@ -166,7 +166,7 @@
             </div>
             <div class="swiper-slide swiper-slide1">
                 <img class="img-carrousel" src="./img/antique-g3f92090d1_1280.jpg" alt="">
-                <div class="hj">
+                <div class="full-container-p">
                     <div class="container-p">
                         <p class="p-carrousel">Bienvenido a (Nombre marca)</p>
                     </div>
@@ -174,7 +174,7 @@
             </div>
             <div class="swiper-slide swiper-slide1">
                 <img class="img-carrousel" src="./img/antique-g3f92090d1_1280.jpg" alt="">
-                <div class="hj">
+                <div class="full-container-p">
                     <div class="container-p">
                         <p class="p-carrousel">Bienvenido a (Nombre marca)</p>
                     </div>
@@ -198,61 +198,68 @@
             </div>
             <div class="swiper swiper2">
                 <!-- Additional required wrapper -->
-                <div class="swiper-wrapper products">
+                <div class="swiper-wrapper products" data-aos="fade-up">
                     <!-- Slides -->
                     <div class="swiper-slide swiper-slide2">
                         <img class="img-carrousel-vertical" src="./img/room-g4de92321b_1280.jpg" alt="">
                         <div class="info-new-product">
-                            <h3>Articulo1</h3>
+                            <h3>Articulo 1</h3>
                             <a href="ar1.html">Ver oferta actual</a>
                         </div>
                     </div>
                     <div class="swiper-slide swiper-slide2">
                         <img class="img-carrousel-vertical" src="./img/wooden-bench-g6142c268b_1280.jpg" alt="">
                         <div class="info-new-product">
-                            <h3>Articulo1</h3>
+                            <h3>Articulo 2</h3>
                             <a href="ar1.html">Ver oferta actual</a>
                         </div>
                     </div>
                     <div class="swiper-slide swiper-slide2">
                         <img class="img-carrousel-vertical" src="./img/copper-teapots-gb20fa09e7_1280.jpg" alt="">
                         <div class="info-new-product">
-                            <h3>Articulo1</h3>
-                            <a href="ar1.html">Ver oferta actual</a>
-                        </div>
-                    </div>
-                    <div class="swiper-slide swiper-slide2">
-                        <img class="img-carrousel-vertical" src="./img/chair-g0d89a751c_1280.jpg" alt="">
-                        <div class="info-new-product">
-                            <h3>Articulo1</h3>
+                            <h3>Articulo 3</h3>
                             <a href="ar1.html">Ver oferta actual</a>
                         </div>
                     </div>
                     <div class="swiper-slide swiper-slide2">
                         <img class="img-carrousel-vertical" src="./img/room-g4de92321b_1280.jpg" alt="">
                         <div class="info-new-product">
-                            <h3>Articulo1</h3>
+                            <h3>Articulo 1</h3>
                             <a href="ar1.html">Ver oferta actual</a>
                         </div>
                     </div>
                     <div class="swiper-slide swiper-slide2">
                         <img class="img-carrousel-vertical" src="./img/wooden-bench-g6142c268b_1280.jpg" alt="">
                         <div class="info-new-product">
-                            <h3>Articulo1</h3>
+                            <h3>Articulo 2</h3>
                             <a href="ar1.html">Ver oferta actual</a>
                         </div>
                     </div>
                     <div class="swiper-slide swiper-slide2">
                         <img class="img-carrousel-vertical" src="./img/copper-teapots-gb20fa09e7_1280.jpg" alt="">
                         <div class="info-new-product">
-                            <h3>Articulo1</h3>
+                            <h3>Articulo 3</h3>
                             <a href="ar1.html">Ver oferta actual</a>
                         </div>
                     </div>
                     <div class="swiper-slide swiper-slide2">
-                        <img class="img-carrousel-vertical" src="./img/chair-g0d89a751c_1280.jpg" alt="">
+                        <img class="img-carrousel-vertical" src="./img/room-g4de92321b_1280.jpg" alt="">
                         <div class="info-new-product">
-                            <h3>Articulo1</h3>
+                            <h3>Articulo 1</h3>
+                            <a href="ar1.html">Ver oferta actual</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide2">
+                        <img class="img-carrousel-vertical" src="./img/wooden-bench-g6142c268b_1280.jpg" alt="">
+                        <div class="info-new-product">
+                            <h3>Articulo 2</h3>
+                            <a href="ar1.html">Ver oferta actual</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide2">
+                        <img class="img-carrousel-vertical" src="./img/copper-teapots-gb20fa09e7_1280.jpg" alt="">
+                        <div class="info-new-product">
+                            <h3>Articulo 3</h3>
                             <a href="ar1.html">Ver oferta actual</a>
                         </div>
                     </div>
@@ -269,31 +276,6 @@
             </div>
 
         </div>
-
-        <!-- <div class="full-container-ars">
-            <div class="container-ars">
-                <img width="100"
-                    src="https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-1-scaled-1150x647.png"
-                    alt="">
-                <h1>ar1</h1>
-                <a href="ar1.html">IR</a>
-            </div>
-            <div class="container-ars">
-                <img width="100"
-                    src="https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-1-scaled-1150x647.png"
-                    alt="">
-                <h1>ar2</h1>
-                <a href="#">IR</a>
-            </div>
-            <div class="container-ars">
-                <img width="100"
-                    src="https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-1-scaled-1150x647.png"
-                    alt="">
-                <h1>ar2</h1>
-                <a href="#">IR</a>
-            </div>
-        </div> -->
-
     </section>
 
     <div class="go-top-container">
@@ -315,6 +297,7 @@
     <!-- CDN JS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <!-- ------------------------------------------------------------------------------------------------------------------------ -->
 
     <!-- Global JS -->
@@ -323,13 +306,14 @@
     <script src="./js/components/toTheTop/toTheTop.js"></script>
     <script src="./js/components/navbar/navbar.js" defer></script>
     <script type="module" src="./js/components/modal/modal.js"></script>
-    <!-- <script src="./js/components/loader/loader.js"></script> -->
+    <script src="./js/components/loader/loader.js"></script>
     <script defer src="./js/components/toggleTheme/toggleTheme.js"></script>
     <!-- ------------------------------------------------------------------------------------------------------------------------ -->
 
     <!-- JS -->
     <script type="module" src="./js/main.js"></script>
     <script type="module" src="./js/components/carrousel/carrousel.js"></script>
+    <script type="module" src="./js/components/animation/animation.js"></script>
     <!-- ------------------------------------------------------------------------------------------------------------------------ -->
 
 </body>

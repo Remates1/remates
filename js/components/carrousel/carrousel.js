@@ -4,11 +4,11 @@ const swiper = new Swiper('.swiper1', {
     loop: true,
     allowTouchMove: true, // Permite que sea arrastrable con el mouse
     // effect: "fade", // Efecto al cambiar de slider
-    /* autoplay: { // Permite que el slider cambie automaticamente
-        delay: 3000, // Segundos al cambiar
+    autoplay: { // Permite que el slider cambie automaticamente
+        delay: 4000, // Segundos al cambiar
         // pauseOnMouseEnter: true, // Hace que el slider pare cuando el mouse pase por arriba
         // disableOnInteraction: false, // Una vez que el mouse ya no este el contacto con el slider, este mismo siguira pasando
-    }, */
+    },
 
     // If we need pagination
     pagination: {
