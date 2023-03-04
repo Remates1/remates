@@ -35,8 +35,8 @@ var accountCreationDateUser;
 
 const circle = document.getElementById('circle');
 export function userChangeData(userUID) {
-    circle.style.display = 'block';
     if (containerProfile !== null) {
+        circle.style.display = 'block';
         onSnapshot(doc(db, "users", userUID), (doc) => {
             circle.style.display = 'none';
             clearHTML()

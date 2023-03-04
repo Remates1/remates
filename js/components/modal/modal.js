@@ -1,3 +1,5 @@
+import { body } from "../../globalVars.js"
+
 /* Modal Login */
 const signInForm = document.querySelector('#login-form')
 let closeModalLogin = document.querySelectorAll('.close-login')[0]

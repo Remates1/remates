@@ -14,6 +14,8 @@ export const time = `${hours} ${minutes} ${seconds}`
 const circle = document.getElementById('circle');
 const data = document.getElementById('data');
 
+export const body = document.querySelector('body')
+
 export function reload() {
     setTimeout(function () {
         window.location.reload()

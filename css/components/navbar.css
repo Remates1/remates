@@ -18,11 +18,11 @@ img, video {
 }
 
 .container {
-    max-width: 80rem;
+    max-width: 1440px;
     width: 100%;
     height: auto;
-    padding: 0 2rem;
-    margin: 0 auto
+    padding: 0 57px;
+    margin: auto
 }
 
 @media only screen and (max-width:768px) {
@@ -233,7 +233,7 @@ img, video {
 }
 
 .size-icon {
-    font-size: 35px;
+    font-size: 26px;
 }
 
 .size-icon-account {

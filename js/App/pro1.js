@@ -16,6 +16,7 @@ const num = document.querySelector('#num')
 var valueUserU;
 var valueNameUserU;
 var valueImgUserU
+var valueAgeUserU
 var valueUserAlto;
 var valueNameUser2;
 var minimo
@@ -26,6 +27,7 @@ export function valueOn(userUID) {
             const userData = doc.data()
             valueNameUserU = userData.name
             valueImgUserU = userData.accountImg
+            valueAgeUserU = userData.age
         })
 
         onSnapshot(doc(db, "pro1/" + "minimo"), (doc) => {
@@ -36,29 +38,33 @@ export function valueOn(userUID) {
 
         btnValue?.addEventListener('click', () => {
             //console.log(inputValue.value)
-            if (inputValue.value !== '') {
-                if (inputValue.value > minimo || minimo == undefined) {
-                    if (inputValue.value - minimo > 200 || minimo == undefined) {
-                        setDoc(doc(db, "pro1/", userUID), {
-                            valueUser: parseInt(inputValue.value),
-                            valueNameUser: valueNameUserU,
-                            valueImgUser: valueImgUserU,
-                            valueCreationDate: date,
-                            valueCreationTime: time,
-                        });
-                        setDoc(doc(db, "pro1/" + "minimo"), {
-                            minimo: parseInt(inputValue.value)
-                        });
-                        inputValue.value = ''
+            if (valueAgeUserU !== '') {
+                if (inputValue.value !== '') {
+                    if (inputValue.value > minimo || minimo == undefined) {
+                        if (inputValue.value - minimo > 200 || minimo == undefined) {
+                            setDoc(doc(db, "pro1/", userUID), {
+                                valueUser: parseInt(inputValue.value),
+                                valueNameUser: valueNameUserU,
+                                valueImgUser: valueImgUserU,
+                                valueCreationDate: date,
+                                valueCreationTime: time,
+                            });
+                            setDoc(doc(db, "pro1/" + "minimo"), {
+                                minimo: parseInt(inputValue.value)
+                            });
+                            inputValue.value = ''
+                        } else {
+                            let dif = inputValue.value - minimo
+                            alert("La diferencia tiene que ser mayor a 200. \nDiferencia: " + dif)
+                        }
                     } else {
-                        let dif = inputValue.value - minimo
-                        alert("La diferencia tiene que ser mayor a 200. \nDiferencia: " + dif)
+                        alert("El numero tiene que se mayor $" + minimo)
                     }
                 } else {
-                    alert("El numero tiene que se mayor $" + minimo)
+                    alert("El campo no puede estar vacio")
                 }
             } else {
-                alert("El campo no puede estar vacio")
+                alert("Edad no definida")
             }
         })
 

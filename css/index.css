@@ -1,13 +1,61 @@
 @import url('https://fonts.cdnfonts.com/css/digital-numbers');
 
-.section1 {
-    margin: 100px auto;
-    padding: 0 0.75rem;
+.section-new-products {
+    background-color: #9E9C71;
+    margin-bottom: 200px;
+}
+
+.container-new-products {
+    margin: auto;
+    padding: 50px;
     max-width: 1440px;
+
+    *justify-content: center;
+    *align-items: center;
+    *flex-direction: column;
+    *background-color: rgb(11, 126, 228);
+}
+
+@media screen and (max-width: 550px) {
+    .container-new-products {
+        padding: 14px;
+    }
+
+    .title-new-products {
+        margin-bottom: 14px;
+        
+    }
+}
+
+.title-new-products {
+    margin-bottom: 50px;
+    color: white;
+    font-size: 19px;
+}
+
+.info-new-product {
+    margin: 13px;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    gap: 10px;
+}
+
+.info-new-product h3 {
+    color: white;
+    font-size: 20px;
+    cursor: default;
+}
+
+.info-new-product a {
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    width: 100%;
+    padding: 10px 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #E6A06F;
+    font-size: 20px;
 }
 
 #con {
@@ -152,14 +200,13 @@
     .countdown {
         font-size: 20px;
     }
-    
+
     .countdown span {
         min-width: 40px;
         height: 50px;
     }
-    
+
     .countdown span::before {
         font-size: 13px;
     }
 }
-
