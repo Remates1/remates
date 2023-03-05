@@ -225,9 +225,9 @@ img, video {
 .search {
     padding: 6px;
     outline: none;
-    border-radius: 3px;
-    border: none;
-    background-color: rgb(209, 208, 207);
+    *border-radius: 3px;
+    *border: none;
+    *background-color: rgb(209, 208, 207);
 }
 
 .img-User {
@@ -484,5 +484,9 @@ img, video {
         flex-direction: row-reverse;
         *background-color: aqua;
         display: flex;
+    }
+
+    .search {
+        width: 100%;
     }
 }

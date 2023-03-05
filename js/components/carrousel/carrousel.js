@@ -46,9 +46,9 @@ const swiper2 = new Swiper('.swiper2', {
         // disableOnInteraction: false, // Una vez que el mouse ya no este el contacto con el slider, este mismo siguira pasando
     }, */
 
-    // If we need pagination
-    /* pagination: {
-        el: '.swiper-pagination',
+    /* // If we need pagination
+    pagination: {
+        el: '.swiper-pagination2',
         // type: "progressbar", // Tipo de paginacion
         clickable: true, // Permite la paginacion
         // dynamicBullets: true, // Le da estilos a la paginacion
