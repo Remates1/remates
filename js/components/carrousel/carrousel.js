@@ -37,7 +37,7 @@ const swiper2 = new Swiper('.swiper2', {
     spaceBetween: 50, // Espacio entre slide
     //slidesPerGroupAuto: true, // Pasar slides por grupo
     direction: 'horizontal',
-    // loop: true,
+    loop: true,
     allowTouchMove: true, // Permite que sea arrastrable con el mouse
     //effect: "fade", // Efecto al cambiar de slider
     /* autoplay: { // Permite que el slider cambie automaticamente
