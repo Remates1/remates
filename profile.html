@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Perfil</title>
+    <!-- Inicial script -->
+    <script src="./assets/components/toggleTheme/js/InicialThemeUser.js"></script>
+    <!-- ------------------------------------------------------------------------------------------------------------------------ -->
+
+    <!-- CDN CSS -->
+    <script src="https://kit.fontawesome.com/cac5cb4726.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!-- ------------------------------------------------------------------------------------------------------------------------ -->
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="./assets/css/all.css">
+    <link rel="stylesheet" href="./assets/components/toTheTop/css/toTheTop.css">
+    <link rel="stylesheet" href="./assets/components/footer/css/footer.css">
+    <link rel="stylesheet" href="./assets/components/toggleTheme/css/toggleTheme.css">
+    <link rel="stylesheet" href="./assets/components/modal/css/modal.css">
+    <link rel="stylesheet" href="./assets/components/loader/css/loader.css">
+    <link rel="stylesheet" type="text/css" href="./assets/components/navbar/css/navbar.css">
+    <!-- ------------------------------------------------------------------------------------------------------------------------ -->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/profile.css">
+    <!-- ------------------------------------------------------------------------------------------------------------------------ -->
+
+</head>
+
+<body>
+    <!-- <div id="loader-container">
+        <div id="loader"></div>
+    </div> -->
+    <!-- Section: Header -->
+    <header class="header">
+        <div class="container">
+            <section class="wrapper">
+                <h2><a href="index.html" class="brand">Brand</a></h2>
+
+                <button type="button" class="btn-open-close opened-menu">
+                    <i class="size-icon fa-solid fa-bars"></i>
+                </button>
+
+                <div class="overlay"></div>
+                <nav class="navbar">
+                    <div class="container-btn">
+
+                        <button type="button" class="btn-open-close closed-menu">
+                            <i class="size-icon fa-solid fa-xmark"></i>
+                        </button>
+                        <button class="dark-mode-btn" aria-label="Activar modo oscuro">
+                            <i class='bx bx-sun'></i>
+                        </button>
+                        <button class="light-mode-btn" aria-label="Activar modo claro">
+                            <i class='bx bx-moon'></i>
+                        </button>
+                    </div>
+                    <ul class="menu">
+                        <li class="menu-item"><a href="index.html">Inicio</a></li>
+                        <li class="menu-item"><a href="#">About</a></li>
+                        <li class="menu-item menu-item-has-children">
+                            <a href="#" data-toggle="sub-menu">Services<i class="expand"></i></a>
+                            <ul class="sub-menu">
+                                <li class="menu-item"><a href="#">Web Design</a></li>
+                                <li class="menu-item"><a href="#">Web Development</a></li>
+                                <li class="menu-item"><a href="#">Brand Marketing</a></li>
+                                <li class="menu-item"><a href="#">SEO and Optimizing</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item menu-item-has-children">
+                            <a href="#" data-toggle="sub-menu">Article <i class="expand"></i></a>
+                            <ul class="sub-menu">
+                                <li class="menu-item"><a href="#">Article One</a></li>
+                                <li class="menu-item"><a href="#">Article Two</a></li>
+                                <li class="menu-item"><a href="#">Article Three</a></li>
+                                <li class="menu-item"><a href="#">Article Four</a></li>
+                                <li class="menu-item"><a href="#">Article Five</a></li>
+                                <li class="menu-item"><a href="#">Article Six</a></li>
+                                <li class="menu-item"><a href="#">Article Seven</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item"><a href="#">Contact </a></li>
+                        <li class="menu-item menu-item-has-children">
+                            <a href="#" data-toggle="sub-menu">Cuenta <i class="expand"></i></a>
+                            <ul class="sub-menu">
+                                <li class="menu-item open-login logged-out"><a href="#">Iniciar sesion</a></li>
+                                <li class="menu-item open-signup logged-out"><a href="#">Crear cuenta</a></li>
+                                <li class="menu-item logged-in"><a href="profile.html"><i class="fa-solid fa-user"></i>
+                                        Perfil</a></li>
+                                <li class="menu-item logged-in" id="logout"><a href="#"><i
+                                            class="fa-solid fa-right-from-bracket"></i> Cerrar sesion</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
+    </header>
+
+    <div class="modal-container-login">
+        <div class="modal-login modal-close-login">
+            <p class="close-login"><i class="fa-solid fa-xmark"></i></p>
+            <div class="modal-text-login">
+                <form action="" id="login-form">
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="login-email" placeholder="Email" required>
+                    </div>
+                    <div>
+                        <label for="password">Password:</label>
+                        <input type="password" id="login-password" placeholder="Password" required>
+                    </div>
+                    <div>
+                        <button type="submit">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-container-signup">
+        <div class="modal-signup modal-close-signup">
+            <p class="close-signup"><i class="fa-solid fa-xmark"></i></p>
+            <div class="modal-text-signup">
+                <form action="" id="signup-form">
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text" id="signup-name" placeholder="Name" required minlength="2" maxlength="20">
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="signup-email" placeholder="Email" required>
+                    </div>
+                    <div>
+                        <label for="password">Password:</label>
+                        <input type="password" id="signup-password" placeholder="Password" required>
+                    </div>
+                    <div>
+                        <button type="submit">Sign up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <section class="section1"
+        style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin-top: 100px; margin-bottom: 200px;">
+        <!-- <p class="countdown">
+            <span id="dayElement">00</span>:
+            <span id="hourElement">00</span>:
+            <span id="minElement">00</span>:
+            <span id="secElement">00</span>
+        </p>
+        <h1 id="timeOut"></h1> -->
+        <div class="container-profile">
+            <div id="show-img">
+                <div class="sk-circle" style="display: none;" id="circle">
+                    <div class="sk-circle1 sk-child"></div>
+                    <div class="sk-circle2 sk-child"></div>
+                    <div class="sk-circle3 sk-child"></div>
+                    <div class="sk-circle4 sk-child"></div>
+                    <div class="sk-circle5 sk-child"></div>
+                    <div class="sk-circle6 sk-child"></div>
+                    <div class="sk-circle7 sk-child"></div>
+                    <div class="sk-circle8 sk-child"></div>
+                    <div class="sk-circle9 sk-child"></div>
+                    <div class="sk-circle10 sk-child"></div>
+                    <div class="sk-circle11 sk-child"></div>
+                    <div class="sk-circle12 sk-child"></div>
+                </div>
+                <div id="data" style="margin: 3rem;"></div>
+            </div>
+            <div>
+                <input id="inputImg" type="url">
+                <button class="btnImg">Cambiar</button>
+            </div>
+            <div>
+                <div>
+                    <h1 id="name">Nombre: </h1>
+                    <p id="counterName"></p>
+                    <input id="inputName" type="text" minlength="2" maxlength="20">
+                    <!-- <button>Editar</button> -->
+                    <button id="acceptName">Aceptar</button>
+                </div>
+                <br>
+                <div>
+                    <h1 id="age">Edad: </h1>
+                    <p id="counterAge">Numero de intentos: </p>
+                    <input id="inputAge" type="number">
+                    <!-- <button>Editar</button> -->
+                    <button id="aceeptAge">Aceptar</button>
+                </div>
+                <br>
+                <div>
+                    <p id="userRegister"></p>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <div class="go-top-container">
+        <div class="go-top-button">
+            <i class="fa-solid fa-chevron-up"></i>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container-footer">
+            <span class="text-muted"><a href="#">&copy; Brand</a></span>
+        </div>
+    </footer>
+
+    <!-- CDN JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- ------------------------------------------------------------------------------------------------------------------------ -->
+
+    <!-- Global JS -->
+    <script type="module" src="./assets/js/app.js"></script>
+    <script type="module" src="./assets/js/App/firebase.js"></script>
+    <script src="./assets/components/toTheTop/js/toTheTop.js"></script>
+    <script src="./assets/components/navbar/js/navbar.js" defer></script>
+    <script type="module" src="./assets/components/modal/js/modal.js"></script>
+    <!-- <script src="./js/components/loader/loader.js"></script> -->
+    <script defer src="./assets/components/toggleTheme/js/toggleTheme.js"></script>
+    <!-- ------------------------------------------------------------------------------------------------------------------------ -->
+
+    <!-- JS -->
+    <script type="module" src="./assets/products/js/main.js"></script>
+    <!-- ------------------------------------------------------------------------------------------------------------------------ -->
+
+</body>
+
+</html>
