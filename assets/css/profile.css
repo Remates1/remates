@@ -1,0 +1,38 @@
+.comments {
+    margin-top: 300px;
+}
+
+.container-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#show-img {
+    *background-color: aqua;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgPro {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* .pen {
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(194, 194, 194);
+    margin: 20px;
+} */
+
+.btnImg {
+    margin-bottom: 20px;
+}
