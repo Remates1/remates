@@ -44,7 +44,7 @@ export const productsArray = [
             img: conditionURL ? woodenImgGithubURL : woodenImgOtherURL,
             alt: 'Articulo 2'
         },
-        href: conditionURL ? 'remates/assets/products/remates/ar2.html' : '../../../assets/products/ar2.html',
+        href: conditionURL ? 'remates/assets/products/ar2.html' : '../../../assets/products/ar2.html',
         category: ['comedia']
     },
 
@@ -55,7 +55,7 @@ export const productsArray = [
             img: conditionURL ? cooperImgGithubURL : cooperImgOtherURL,
             alt: 'Articulo 3'
         },
-        href: conditionURL ? 'remates/assets/products/remates/ar3.html' : '../../../assets/products/ar3.html',
+        href: conditionURL ? 'remates/assets/products/ar3.html' : '../../../assets/products/ar3.html',
         category: ['anime']
     },
 
@@ -66,7 +66,7 @@ export const productsArray = [
             img: conditionURL ? chairImgGithubURL : chairImgOtherURL,
             alt: 'Articulo 4'
         },
-        href: conditionURL ? 'remates/assets/products/remates/ar4.html' : '../../../assets/products/ar4.html',
+        href: conditionURL ? 'remates/assets/products/ar4.html' : '../../../assets/products/ar4.html',
         category: ['']
     },
 
@@ -77,7 +77,7 @@ export const productsArray = [
             img: conditionURL ? roomImgGithubURL : roomImgOtherURL,
             alt: 'Articulo 1'
         },
-        href: conditionURL ? 'remates/assets/products/remates/ar1.html' : '../../../assets/products/ar1.html',
+        href: conditionURL ? 'remates/assets/products/ar1.html' : '../../../assets/products/ar1.html',
         category: ['']
     },
 
@@ -89,7 +89,7 @@ export const productsArray = [
             img: conditionURL ? woodenImgGithubURL : woodenImgOtherURL,
             alt: 'Articulo 2'
         },
-        href: conditionURL ? 'remates/assets/products/remates/ar2.html' : '../../../assets/products/ar2.html',
+        href: conditionURL ? 'remates/assets/products/ar2.html' : '../../../assets/products/ar2.html',
         category: ['']
     },
 
@@ -100,7 +100,7 @@ export const productsArray = [
             img: conditionURL ? cooperImgGithubURL : cooperImgOtherURL,
             alt: 'Articulo 3'
         },
-        href: conditionURL ? 'remates/assets/products/remates/ar3.html' : '../../../assets/products/ar3.html',
+        href: conditionURL ? 'remates/assets/products/ar3.html' : '../../../assets/products/ar3.html',
         category: ['']
     },
 
@@ -111,7 +111,7 @@ export const productsArray = [
             img: conditionURL ? chairImgGithubURL : chairImgOtherURL,
             alt: 'Articulo 4'
         },
-        href: conditionURL ? 'remates/assets/products/remates/ar4.html' : '../../../assets/products/ar4.html',
+        href: conditionURL ? 'remates/assets/products/ar4.html' : '../../../assets/products/ar4.html',
         category: ['']
     },
 
