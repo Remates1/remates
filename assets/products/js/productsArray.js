@@ -32,7 +32,7 @@ export const productsArray = [
             img: conditionURL ? roomImgGithubURL : roomImgOtherURL,
             alt: 'Articulo 1'
         },
-        href: conditionURL ? '../assets/products/remates/ar1.html' : '../../../assets/products/ar1.html',
+        href: conditionURL ? 'remates/assets/products/ar1.html' : '../../../assets/products/ar1.html',
         category: ['anime', 'accion']
     },
 
